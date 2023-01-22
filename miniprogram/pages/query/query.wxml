@@ -1,0 +1,43 @@
+<!--pages/query/query.wxml-->
+<view class="form" report-submit='true' onsubmit="createItem">
+    <form report-submit='true' onsubmit="createItem">
+<view class="form-item" style="color: {{titleColor.Rejecttextdes}};">
+      <view class='item-title'>文字描述</view>
+      <textarea placeholder='请简要描述质疑内容。。。' name="Rejectcontent" value='{{Rejectcontent}}'></textarea>
+</view>
+<view class="form-item">
+      <view class='item-title .is-ness' style="color:{{titleColor.problemLabel}}">
+        重新选择分类
+        <icon name="question-o" style="margin-left: 8px;" bindtap="goToArticle" />
+      </view>
+      <radio-group value='{{problemLabel}}' bind:change="onChangeRadio" class="radio">
+            <radio value="餐饮">餐饮</radio>
+            <radio value="娱乐">娱乐</radio>
+            <radio value="交通">交通</radio>
+      </radio-group>
+    </view>
+    <view class="form-item" style="color:{{titleColor.images}}">
+      <view class='item-title .is-ness'>图片上传</view>
+      <view class="item-desc">请最多上传两张完整且清晰的兴趣点问题图片</view>
+      <view class="cu-form-group">
+        <view class="grid col-4 grid-square flex-sub">
+          <view class="bg-img" wx:for="{{images}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{images[index]}}">
+            <image src='{{images[index]}}' mode='aspectFill'></image>
+            <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+              <text class="cuIcon-close"></text>
+            </view>
+          </view>
+          <view class="solids" bindtap="uploadImage" wx:if="{{images.length<2}}">
+            <text class="cuIcon-cameraadd"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="form-item" style="color: {{titleColor.Nowtextdes}};">
+      <view class='item-title'>文字描述</view>
+      <textarea placeholder='请简要描述更正兴趣点内容。。。' name="Nowcontent" value='{{Nowcontent}}'></textarea>
+</view>
+    <button class='submit' form-type='submit'>提交</button>
+    
+  </form>
+</view>

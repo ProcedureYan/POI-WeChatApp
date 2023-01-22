@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-6gvo9lsida21f698 --n quickstartFunctions --r --project "E:\POI采集核验" --report_first --report

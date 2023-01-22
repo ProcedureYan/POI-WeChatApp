@@ -1,0 +1,107 @@
+
+@import "../../ColorUI/icon.wxss";
+@import "../../ColorUI/main.wxss";
+
+page {
+  width: 750rpx;
+  background-color: #fff;
+}
+
+.slide-image {
+  width: 750rpx;
+}
+
+swiper {
+  height: 424rpx;
+  background-color: #eee;
+}
+
+.content {
+
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.problem {
+  font-size: 60rpx;
+  font-weight: 350;
+  margin-top: 80rpx;
+  margin-bottom: 70rpx;
+  color: #0077e5;
+}
+
+.user {
+  width: 700rpx;
+  margin-bottom: 30rpx;
+  /* font-weight: 200; */
+  text-align: center;
+}
+
+.address {
+  width: 600rpx;
+  margin-bottom: 40rpx;
+  /* font-weight: 200; */
+  text-align: center;
+}
+
+
+
+
+
+.copy_path {
+  position: relative;
+  left: 0%;
+  margin-bottom: 30px;
+  color: #7795f8;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.delete_item {
+  position: relative;
+  left: 0%;
+  margin-bottom: 10px;
+  color: #ff0000;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+
+.navigateBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20rpx;
+}
+
+.navigate {
+  margin: 20rpx 0rpx;
+  width: 80%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-weight: 200;
+  background-color: #007ce6;
+}
+
+.solutionbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20rpx;
+}
+
+.solution{
+  margin: 20rpx 0rpx;
+  width: 80%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  font-weight: 200;
+  background-color: #007ce6;
+}

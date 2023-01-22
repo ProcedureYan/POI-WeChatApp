@@ -1,0 +1,55 @@
+<!--pages/solutionQuery/solutionQuery.wxml-->
+
+<block wx:if="{{Beforinfor.images}}">
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
+    <block wx:for="{{Beforinfor.images}}">
+      <swiper-item>
+        <image src="{{item}}" data-url="{{item}}" class="slide-image" mode="aspectFit" bindtap="tapBeforImage" />
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+<view class="content">
+  <view class="problem">{{Beforinfor.problemLabel}}</view>
+  <view class="user">
+    <!-- <van-icon name="contact" class="text-blue margin-right-df" /> -->
+    <text class="cuIcon-people text-blue margin-right-df" ></text>
+    上传者：
+    <text style="font-size:40rpx;">{{Beforinfor.userName || "系统管理员"}}</text>
+  </view>
+  <view class="address">
+    <!-- <van-icon name="location-o" class="text-blue margin-right-df" /> -->
+    <text class="cuIcon-location text-blue margin-right-df"></text>
+    {{Beforinfor.address}}
+  </view>
+</view>
+<block wx:if="{{Nowinfor.Nowimages}}">
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
+    <block wx:for="{{Nowinfor.Nowimages}}">
+      <swiper-item>
+        <image src="{{item}}" data-url="{{item}}" class="slide-image" mode="aspectFit" bindtap="tapNowImage" />
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+  <view class="content">
+  <view class="problem">{{Nowinfor.NowProblemLabel}}</view>
+  <view class="user">
+    <!-- <van-icon name="contact" class="text-blue margin-right-df" /> -->
+    <text class="cuIcon-people text-blue margin-right-df" ></text>
+    质疑者：
+    <text style="font-size:40rpx;">{{Nowinfor.userName || "系统管理员"}}</text>
+  </view>
+  <view class="address">
+    <!-- <van-icon name="location-o" class="text-blue margin-right-df" /> -->
+    <text class="cuIcon-location text-blue margin-right-df"></text>
+    {{Beforinfor.address}}
+  </view>
+</view>
+<view class="solution-reason">质疑原因：
+<text>{{Nowinfor.Nowcontent}}</text>
+</view>
+  <view class="navigateBox">
+    <button class='navigate' bindtap='attain'>确认</button>
+  </view>
+  <button class='button delete_item' bindtap='turndown'>驳回</button>

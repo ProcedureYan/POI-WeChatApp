@@ -1,0 +1,43 @@
+<block wx:if="{{infor.images}}">
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
+    <block wx:for="{{infor.images}}">
+      <swiper-item>
+        <image src="{{item}}" data-url="{{item}}" class="slide-image" mode="aspectFit" bindtap="tapImage" />
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+<view class="content">
+  <view class="problem">{{infor.problemLabel}}</view>
+  <view class="user">
+    <!-- <van-icon name="contact" class="text-blue margin-right-df" /> -->
+    <text class="cuIcon-people text-blue margin-right-df" ></text>
+    上传者：
+    <text style="font-size:40rpx;">{{infor.userName || "系统管理员"}}</text>
+  </view>
+  <view class="address">
+    <!-- <van-icon name="location-o" class="text-blue margin-right-df" /> -->
+    <text class="cuIcon-location text-blue margin-right-df"></text>
+    {{infor.address}}
+  </view>
+</view>
+<block wx:if="{{is_administrator}}">
+  <view class="navigateBox">
+    <button class='navigate' bindtap='navigate'>导航</button>
+  </view>
+  <button class='button delete_item' bindtap='deleteItem'>删除标记</button>
+</block>
+<block wx:elif="{{infor._openid==UserID}}">
+  <view class="navigateBox">
+    <button class='navigate' bindtap='navigate'>导航</button>
+  </view>
+  <button class='button delete_item' bindtap='deleteItem'>删除标记</button>
+</block>
+<block wx:else>
+  <view class="navigateBox">
+    <button class='navigate' bindtap='navigate'>导航</button>
+  </view>
+  <view class="solutionbox">
+    <button class='solution' bindtap="solution">质疑</button>
+  </view>
+</block>

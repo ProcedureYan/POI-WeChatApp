@@ -1,0 +1,4 @@
+<!--pages/article/article.wxml-->
+<view>
+    <image mode="widthFix" src="cloud://cloud1-6gvo9lsida21f698.636c-cloud1-6gvo9lsida21f698-1311049346/1.png"></image>
+</view>
